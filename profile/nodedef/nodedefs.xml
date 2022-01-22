@@ -1,0 +1,41 @@
+<nodeDefs>
+
+<!-- The node server control Node-->
+  <nodeDef id="ctl" nls="ctl">
+    <sts>
+      <st id="ST" editor="bool" />
+      <st id="GV0" editor="moduleAddress" />
+      <st id="GV1" editor="moduleType" />
+	  </sts>
+    <cmds>
+      <sends />
+      <accepts>
+      </accepts>
+    </cmds>
+  </nodeDef>
+
+  <!-- The device Node-->
+  <nodeDef id="irdevice" nls="irdevice">
+    <sts>
+      <st id="GV0" editor="errors" />
+	  </sts>
+    <cmds>
+      <sends />
+      <accepts>
+        <cmd id="COMMAND">
+          <p id="BUTTON" editor="button" />
+          <p id="CODE" editor="code" />
+          <p id="CONNECTOR" editor="connector" />
+          <p id="REPEAT" editor="repeat" />
+        </cmd>
+        <cmd id="STOP">
+          <p id="CONNECTOR" editor="connector" />
+        </cmd>
+      </accepts>
+    </cmds>
+  </nodeDef>
+
+ 
+
+
+</nodeDefs>
