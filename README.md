@@ -1,7 +1,7 @@
 
-#  Polyglot v3 node server OpenSprinkler Copyright (C) 2021 Javier Refuerzo
+#  Polyglot v3 node server iTach Copyright (C) 2021 Javier Refuerzo
 
-A simple node server gets data from open sprinkler at every short poll interval.
+Node server can send IR commands to the Global Cache iTach devices
 
 ## Installation
 PG3 Node Server Store
