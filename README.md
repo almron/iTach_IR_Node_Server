@@ -11,22 +11,18 @@ Please reboot ISY before synchronization with UD Moble or human readable values 
 https://forum.universal-devices.com/forum/323-opensprinkler/
 
 ### Node Settings
-The settings for this node Short Poll, password, url, and manualRunTimeSeconds. All defined below. With the exception of Short Poll all items are set in custom params.
+The settings for this node are url, and manual code sets. All defined below. With the exception of Short Poll all items are set in custom params.
 
 #### Short Poll
-   * How often to get data from open sprinkler. Default is 5 seconds, the same as OpenSprinkler Apps. changing this to a lower value may cause communication issues. changing to a higher value will delay status updats to ISY.
+   * Not used
 
 #### Long Poll
    * Not used
 
-#### password
-   * OpenSprinkler password. This will be converted to MD5 before transmittion
 
 #### url
-   * The local IP Address of Open Sprinkler, this should be fully qualified starting with "http://". OpenSprinkler does not broadcast its location so the address should be reserved in the users router.
+   * The local IP Address of the iTach devcie, this should be fully qualified starting with "http://".
 
-#### manualRunTimeSeconds
-   * The default runtime when an OpenSprinkler station is triggered manually. This can be changed in ISY but will reset on Polisy restart/reboot.
 
 ## Requirements
 
@@ -36,11 +32,43 @@ The settings for this node Short Poll, password, url, and manualRunTimeSeconds. 
 
 ## Known Issues and limitations
 
-1. Please allow upto one minuite after credentials and URL are saved before opeining the Admin consloe as it may take time to populate sprinkler Station and Program Nodes.
-2. OpenSprinkler idetifies Stations and Programs by index, so moving a program up or down from the OpenSprinkler Web or App interface will cause the Node Server to trigger the wrong program. If this is done please rename nodes in ISY or move back to previous position.
-3. When manually triggering a progarm from ISY it will not show as "Running". This is because OpenSprinkler assigns manually triggered programs to is 254 which is out of range of available programs.  The Node Server will still show as running in both the Parent Station Node ("Stations Queued") and the Main Parent Node ("Running Program")
+1. Canging the order of IR codes in a codeset will change which devcie is triggered in programs, if adding new codes to a codeset add to the end of any current codes.
+2. UD Mobile will only show buttons if there are less then 150 buttons in the codeset. This will be changed on app side in the future
 
 # Release Notes
 
-- 2022.1.16 01/16/2022
+- 2022.1.22 01/22/2022
    - Initial version published to github
+
+# General
+
+Custom Parameters: 
+url: The ip address of the iTach device 
+
+All other custom params are user input devices with the Global Cache IR Codes
+key: The Device i.e. "Onkyo Receiver"
+value: A Global Cache Control Tower IR Database Format
+
+An email from Global Cache with IR Codes look as follows, although there may be many more. The "function, code1, hexcode1, code2, hexcode2" is optional. When imputing the following commands, the custom param key: "Onkyo Receiver" and the value would be all codes for the device.
+
+"
+function, code1, hexcode1, code2, hexcode2
+
+"3D","sendir,1:1,1,38000,1,1,171,171,21,65,21,65,21,65,21,21,21,21,21,21,21,21,21,21,21,65,21,65,21,65,21,21,21,21,21,21,21,21,21,21,21,65,21,65,21,65,21,65,21,65,21,21,21,21,21,65,21,21,21,21,21,21,21,21,21,21,21,65,21,65,21,21,21,1792","0000 006D 0000 0022 00AB 00AB 0015 0041 0015 0041 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0015 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0015 0015 0700",,
+
+"ADD/DELETE","sendir,1:1,1,38000,1,1,170,170,22,64,22,64,22,64,21,22,21,22,21,22,21,22,21,22,21,65,21,65,21,65,21,22,21,22,21,22,21,22,21,22,21,65,21,22,22,22,21,65,21,65,21,22,21,22,21,22,22,22,21,65,21,65,21,22,21,22,21,65,21,65,21,65,21,1769","0000 006D 0000 0022 00AA 00AA 0016 0040 0016 0040 0016 0040 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0041 0015 0041 0015 0041 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0041 0015 0016 0016 0016 0015 0041 0015 0041 0015 0016 0015 0016 0015 0016 0016 0016 0015 0041 0015 0041 0015 0016 0015 0016 0015 0041 0015 0041 0015 0041 0015 06E9",,
+
+"
+
+How to obtain Global Cache Control Tower IR Codes:
+
+Create an account and login to: 
+https://irdb.globalcache.com/Home/Database
+
+Enter the Brand Name of the device you would like to control. Then Select a Device Type, then Select a Model.
+
+Now select the "Send Code Set" button next to the Device Model. Selecting "Select function" will only give you one code.
+
+After receiving the email verify that you can see all IR Codes when scrolling to the bottom of the page. Gmail will clip the message and have a "Message clipped" not at the bottom of the page along with a View Entire Message button. Copy the entire message from the commas in the last IR Code to the beginning of the "function, code1, hexcode1, code2, hexcode2" header then paste into a new custom param value. Set the custom param key to the device name.
+
+There may be multiple code sets that need to be downloaded or a single manufacture. Each Code set should be put into the Node Server Separately. This node serve is installed with the Onkyo Receiver Codes as an example
