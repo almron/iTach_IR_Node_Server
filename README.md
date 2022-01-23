@@ -93,6 +93,8 @@ There may be multiple code sets that need to be downloaded for a single device. 
 
 ## The Group Parent Controller Node "iTach IR"
 
+![please login](<https://github.com/JavierRefuerzo/iTach_IR_Node_Server/blob/main/images/controller.png>)
+
 ### Status Values:
 
 1. NodeServer Online: Displays status in Polyglot
@@ -100,6 +102,8 @@ There may be multiple code sets that need to be downloaded for a single device. 
 3. Module Type: This is the type of module associated with "Module Address" above.  If this is not "3 IR", the iTach device will not work with this Node Server
 
 ## IR Codeset:
+
+![please login](<https://github.com/JavierRefuerzo/iTach_IR_Node_Server/blob/main/images/ir_codeset.png>)
 
 ### Status Values:
 
@@ -110,7 +114,7 @@ There may be multiple code sets that need to be downloaded for a single device. 
 1. Send IR.
 2. Stop IR.
 
-#### Send IR.
+#### Send IR
 
 Parameters: 
 
