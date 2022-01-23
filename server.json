@@ -18,7 +18,7 @@
     	{
     		"title": "iTach IR Node Server for ISY/Polyglot",
     		"author": "Javier Refuerzo",
-    		"version": "2022.01.22",
+    		"version": "2022.01.23",
     		"date": "January 22, 2022",
     		"source": "https://github.com/JavierRefuerzo/OpenSprinklerNodeServer",
 			"license": "https://github.com/JavierRefuerzo/OpenSprinklerNodeServer"
