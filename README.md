@@ -84,6 +84,52 @@ After saving Custom Params, Restart Node Server.
 There may be multiple code sets that need to be downloaded for a single device. Each Code set should be put into the Node Server Separately. This node serve is installed with the Onkyo Receiver Zone 2 Codes as an example.  Note that when pasted into Custom Config from the GC e-mail the new lines are replaced with double space.  The Node Server will parse the document using these double spaces. To input codes manually use a double space between button codes with the same format as the GC e-mail.
 
 
+# Usage
+
+## Nodes: 
+
+1. The Group Parent Controller Node "iTach IR".
+2. IR Codeset.
+
+## The Group Parent Controller Node "iTach IR"
+
+### Status Values:
+
+1. NodeServer Online: Displays status in Polyglot
+2. Module Address: This is the index location starting at zero of the IR controller in the Global Cache device. Usually the first module, 0, is Ethernet/Wifi, and the second module is IR/Serial/Relay. Currently this is not changable but may be in the future to support other Global Cache hardware with multipl IR/Serial/Relay modules
+3. Module Type: This is the type of module associated with "Module Address" above.  If this is not "3 IR", the iTach device will not work with this Node Server
+
+## IR Codeset:
+
+### Status Values:
+
+1. Last Error: Values are None, Unknown (see polyglot logs for error details), or a human readable Global Cache errro.
+
+### Accepts Commands:
+
+1. Send IR.
+2. Stop IR.
+
+#### Send IR.
+
+Parameters: 
+
+1. Button Name: Name for the Button code.
+2. Alternate Codes: Some Global Cache Control Tower Database codesets have multiple IR codes for a single button. If there is not secondary code the first will be used even when selecting Button Code 2.
+3. Connector: The Global Cache IR connector when looking at the iTach from the IR connector side.
+4. Retpeat: Number of times to repeat the IR Code (i.e. Volume). The max is 50. If setting this to repeat the Stop IR command can be used to stop repeating.
+
+
+#### Stop IR
+
+Usually used to stop a repeated Send IR command. For example Send IR param Repeat is set to max 50 on button down press for volume controll, then stopped when button is released.  This will soon be a featue in UD Mobile.
+
+Parameters: 
+
+1. Connector: The Global Cache IR connector when looking at the iTach from the IR connector side.
+
+
+
 # Release Notes
 
 - 2022.1.22 01/22/2022
