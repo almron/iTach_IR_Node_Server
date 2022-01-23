@@ -79,7 +79,7 @@ After saving Custom Params, Restart Node Server.
 
 ![please login](<https://github.com/JavierRefuerzo/iTach_IR_Node_Server/blob/main/images/custom_config.png>)
 
-There may be multiple code sets that need to be downloaded or a single manufacture. Each Code set should be put into the Node Server Separately. This node serve is installed with the Onkyo Receiver Codes as an example
+There may be multiple code sets that need to be downloaded or a single manufacture. Each Code set should be put into the Node Server Separately. This node serve is installed with the Onkyo Receiver Zone 2 Codes as an example.  Note that when pasted into Custom Config from the GC e-mail the new lines are replaced with double space.  The Node Server will parse the document using these double spaces. To input codes manually use a double space between button codes with the same format as the GC e-mail.
 
 
 # Release Notes
