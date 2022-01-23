@@ -69,6 +69,8 @@ https://irdb.globalcache.com/Home/Database
 
 Enter the Brand Name of the device you would like to control. Then Select a Device Type, then Select a Model.
 
+![please login](<https://github.com/JavierRefuerzo/iTach_IR_Node_Server/blob/main/images/please_login.png>)
+
 Now select the "Send Code Set" button next to the Device Model. Selecting "Select function" will only give you one code.
 
 After receiving the email verify that you can see all IR Codes when scrolling to the bottom of the page. Gmail will clip the message and have a "Message clipped" not at the bottom of the page along with a View Entire Message button. Copy the entire message from the commas in the last IR Code to the beginning of the "function, code1, hexcode1, code2, hexcode2" header then paste into a new custom param value. Set the custom param key to the device name.
