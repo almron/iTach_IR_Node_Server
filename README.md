@@ -60,6 +60,8 @@ function, code1, hexcode1, code2, hexcode2
 
 ```
 
+# Global Cache Control Tower Database
+
 How to obtain Global Cache Control Tower IR Codes:
 
 Create an account and login to: 
