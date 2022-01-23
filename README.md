@@ -67,7 +67,7 @@ How to obtain Global Cache Control Tower IR Codes:
 Create an account and login to: 
 https://irdb.globalcache.com/Home/Database
 
-Enter the Brand Name of the device you would like to control. Then Select a Device Type, then Select a Model. Note taht you must Log-in for the "Send Code Set" button to be enabled.
+Enter the Brand Name of the device you would like to control. Then Select a Device Type, then Select a Model. Note that you must Log-in for the "Send Code Set" button to be enabled.
 
 ![please login](<https://github.com/JavierRefuerzo/iTach_IR_Node_Server/blob/main/images/please_login.png>)
 
