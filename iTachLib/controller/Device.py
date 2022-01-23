@@ -5,10 +5,11 @@ Copyright (C) 2021 Javier Refuerzo
 
 """
 
+import udi_interface
 from iTachLib.controller.irCode import IrCode
 from typing import List
 
-from initializer import LOGGER
+LOGGER = udi_interface.LOGGER
 
 
 
