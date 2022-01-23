@@ -37,10 +37,6 @@ The settings for this node are url, and manual code sets. All defined below. Wit
 3. Codesets may be cutoff in Custom Config view port, but should be sent to the Node Server Correctly.
 4. As of 2022.01.22 Nodes are not automatically deleted, i.e. the example device.  To delete the device remove/replace in Polyglot Custom Config. Then from ISY rightclick the controller node, then select ungroup, then right click on the device which is to be deleted and select delete. Finally right click the controller node and select group devices.
 
-# Release Notes
-
-- 2022.1.22 01/22/2022
-   - Initial version published to github
 
 # General
 
@@ -84,3 +80,9 @@ After saving Custom Params, Restart Node Server.
 ![please login](<https://github.com/JavierRefuerzo/iTach_IR_Node_Server/blob/main/images/custom_config.png>)
 
 There may be multiple code sets that need to be downloaded or a single manufacture. Each Code set should be put into the Node Server Separately. This node serve is installed with the Onkyo Receiver Codes as an example
+
+
+# Release Notes
+
+- 2022.1.22 01/22/2022
+   - Initial version published to github
