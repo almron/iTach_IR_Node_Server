@@ -8,6 +8,8 @@ Copyright (C) 2021 Javier Refuerzo
 from iTachLib.controller.irCode import IrCode
 from typing import List
 
+from initializer import LOGGER
+
 
 
 
@@ -16,6 +18,7 @@ class Device :
 
     name: str
     buttons: List[IrCode]
+    observers = None
 
     def __init__(self, name: str, buttons: List[IrCode]):
         self.name = name
@@ -42,8 +45,8 @@ class Device :
     # this should be called before device is removed from controller 
     # so any observers can remove the device from ISY
     def willRemoveDevice(self):
-        if self.removedObserver != None:
-            self.removedObserver()
+        if self.observers != None:
+            LOGGER.info("TODO Remove observer")
             
 
     def _cleanButtonList(self, newIrCodeList: List[IrCode]):
