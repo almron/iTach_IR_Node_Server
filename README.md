@@ -98,7 +98,7 @@ There may be multiple code sets that need to be downloaded for a single device. 
 ### Status Values:
 
 1. NodeServer Online: Displays status in Polyglot
-2. Module Address: This is the index location starting at zero of the IR controller in the Global Cache device. Usually the first module, 0, is Ethernet/Wifi, and the second module is IR/Serial/Relay. Currently this is not changable but may be in the future to support other Global Cache hardware with multipl IR/Serial/Relay modules
+2. Module Address: This is the index location starting at zero of the IR controller in the Global Cache device. Usually the first module, 0, is Ethernet/Wifi, and the second module is IR/Serial/Relay. Currently this is not changeable but may be in the future to support other Global Cache hardware with multipl IR/Serial/Relay modules
 3. Module Type: This is the type of module associated with "Module Address" above.  If this is not "3 IR", the iTach device will not work with this Node Server
 
 ## IR Codeset:
@@ -107,7 +107,7 @@ There may be multiple code sets that need to be downloaded for a single device. 
 
 ### Status Values:
 
-1. Last Error: Values are None, Unknown (see polyglot logs for error details), or a human readable Global Cache errro.
+1. Last Error: Values are None, Unknown (see polyglot logs for error details), or a human readable Global Cache error.
 
 ### Accepts Commands:
 
@@ -121,12 +121,12 @@ Parameters:
 1. Button Name: Name for the Button code.
 2. Alternate Codes: Some Global Cache Control Tower Database codesets have multiple IR codes for a single button. If there is not secondary code the first will be used even when selecting Button Code 2.
 3. Connector: The Global Cache IR connector when looking at the iTach from the IR connector side.
-4. Retpeat: Number of times to repeat the IR Code (i.e. Volume). The max is 50. If setting this to repeat the Stop IR command can be used to stop repeating.
+4. Repeat: Number of times to repeat the IR Code (i.e. Volume). The max is 50. If setting this to repeat the Stop IR command can be used to stop repeating.
 
 
 #### Stop IR
 
-Usually used to stop a repeated Send IR command. For example Send IR param Repeat is set to max 50 on button down press for volume controll, then stopped when button is released.  This will soon be a featue in UD Mobile.
+Usually used to stop a repeated Send IR command. For example Send IR param Repeat is set to max 50 on button down press for volume control, then stopped when button is released.  This will soon be a feature in UD Mobile.
 
 Parameters: 
 
