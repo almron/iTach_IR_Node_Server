@@ -21,7 +21,6 @@ ST-ctl-GV0-NAME = Module address
 ST-ctl-GV1-NAME = Module Type
 
 #irdevice
-NDN-irdevice-NAME = IR Code Set
 NDN-irdevice-ICON = Output
 ST-irdevice-GV0-NAME = Last Error
 
