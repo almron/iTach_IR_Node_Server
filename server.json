@@ -1,6 +1,6 @@
 {
     "name": "iTach-IR",
-    "docs": "https://forum.universal-devices.com/forum/323-opensprinkler/",
+    "docs": "https://forum.universal-devices.com/forum/324-itach-ir/",
     "type": "python3",
     "executable": "initializer.py",
     "install": "install.sh",
