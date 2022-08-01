@@ -8,7 +8,7 @@ PG3 Node Server Store
 Please reboot ISY before synchronization with UD Moble or human readable values may be shown as numbers. 
 
 ## Help
-https://forum.universal-devices.com/forum/323-opensprinkler/
+https://forum.universal-devices.com/forum/324-itach-ir/
 
 ### Node Settings
 The settings for this node are url, and manual code sets. All defined below. With the exception of Short Poll all items are set in custom params.
