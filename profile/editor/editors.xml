@@ -9,8 +9,11 @@
 	<editor id="moduleAddress">
 		<range uom="56" subset="0,1"/>
 	</editor>
+	<!-- changed to configure to 7Port -->
+	<!-- subset="8" - Internal Blaster -->
+	<!-- subset="9,10,11" - External RFtoIR device -->
 	<editor id="connector">
-		<range uom="25" subset="1,2,3" nls="CONNECTOR" />
+		<range uom="25" subset="1,2,3,4,5,6,7,8,9,10,11" nls="CONNECTOR" />
 	</editor>
 	<editor id="errors">
 		<range uom="25" min="-2" max="27" prec="0" nls="ERRORS" /> 
