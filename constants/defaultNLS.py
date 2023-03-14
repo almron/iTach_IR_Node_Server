@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Polyglot v3 node server iTach IR
+Polyglot v3 node server 7Port IR/RF
 Copyright (C) 2021 Javier Refuerzo
 
 """
@@ -69,9 +69,15 @@ ERRORS-27 = Settings are locked.
 CODE-1 = Button Code 1
 CODE-2 = Button Code 2
 
-CONNECTOR-1 = Left 1
-CONNECTOR-2 = Center 2
-CONNECTOR-3 = Right 3
+CONNECTOR-1 = Output 1
+CONNECTOR-2 = Output 2
+CONNECTOR-3 = Output 3
+CONNECTOR-4 = Output 4
+CONNECTOR-5 = Output 5
+CONNECTOR-6 = Output 6
+CONNECTOR-7 = Output 7
+CONNECTOR-8 = Output 8
+CONNECTOR-9 = Output 9
 
 MODULETYPE-0 = UNKNOWN
 MODULETYPE-1 = WIFI
