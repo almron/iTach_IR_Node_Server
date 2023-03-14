@@ -3,7 +3,7 @@ shortPoll: Not Used
 longPoll: Not Used
 
 Custom Parameters: 
-url: The ip address of the iTach device 
+url: The ip address of the 7Port device 
 
 All other custom params are user input devices with the Global Cache IR Codes
 key: The Device i.e. "Onkyo Receiver"
